@@ -1,0 +1,47 @@
+{
+  "reports": [
+    {
+      "visibility": "Wiki and Quill only"
+    },
+    {
+      "liveDirectoryStatus": 200,
+      "stationCount": 2
+    },
+    {
+      "livePlayback": true,
+      "station": "Anon.FM"
+    },
+    {
+      "backgroundPlayback": {
+        "initial": {
+          "src": "https://radio-test.invalid/pop-1.wav",
+          "time": 0.013383
+        },
+        "continued": {
+          "src": "https://radio-test.invalid/pop-1.wav",
+          "time": 1.409564,
+          "paused": false
+        }
+      }
+    },
+    {
+      "stationNavigation": true,
+      "volume": true,
+      "mute": true,
+      "pauseResume": true
+    },
+    {
+      "mobile": {
+        "left": 82,
+        "right": 378,
+        "width": 390,
+        "opacity": "1",
+        "background": "linear-gradient(125deg, rgba(40, 59, 77, 0.7), rgba(16, 31, 43, 0.6))"
+      }
+    },
+    {
+      "directoryOutageHandled": true
+    }
+  ],
+  "errors": []
+}

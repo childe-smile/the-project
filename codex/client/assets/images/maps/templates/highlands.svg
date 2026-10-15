@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720">
+  <defs><pattern id="contour" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M-15 30q45-45 85-5t55 0M-20 55q45-45 85-5t55 0M-25 80q45-45 85-5t55 0" fill="none" stroke="#978e75" opacity=".2"/></pattern><pattern id="forest" width="24" height="28" patternUnits="userSpaceOnUse"><path d="m12 3-7 15h14Zm0 12v9" fill="#60775c" stroke="#52634c"/></pattern></defs>
+  <path d="M0 0h1000v720H0z" fill="#d3c6a5"/><path d="M0 0h1000v720H0z" fill="url(#contour)"/>
+  <path d="M-20 570 70 540 130 575 195 530 260 565 295 620 440 665 480 740H-20Z" fill="#7d9c9c" stroke="#55777a" stroke-width="4"/>
+  <path d="M780-20c-30 130-180 160-145 245S790 400 690 470s-180 150-250 195" fill="none" stroke="#7d9c9c" stroke-width="16"/>
+  <path d="m680 60 235-10 40 180-160 70-150-80zM770 490l190-50 30 220-170 10zM60 80l160-20 50 170-140 110-100-90z" fill="url(#forest)" opacity=".7"/>
+  <g fill="#b8ad8c" stroke="#706b58" stroke-width="3"><path d="m330 160 50-90 55 90m-85-20 28-55 30 55m-30 80 60-100 60 100m-60-24 30-60 30 60m-88 75 65-108 65 108m-80 60 70-120 70 120m-68-20 32-70 40 70m-45 75 70-115 60 115m-50-22 28-65 35 65m-195 60 60-105 60 105"/></g>
+  <path d="m210 390 115-45 75 105 110 10 100 70 180 60" fill="none" stroke="#9d7954" stroke-width="3" stroke-dasharray="9 8"/>
+  <g fill="#5c5240" font-family="Georgia,serif" text-anchor="middle"><text x="500" y="60" font-size="29" letter-spacing="8">THE HIGHLANDS</text><text x="172" y="380" font-size="21">High Keep</text><text x="535" y="493" font-size="21">Amber Pass</text><text x="850" y="608" font-size="21">Pinehaven</text><text x="240" y="647" font-size="22" fill="#3f656d">Lake of Mists</text></g>
+  <g fill="#ecdfc4" stroke="#6c5942" stroke-width="4"><circle cx="210" cy="390" r="9"/><circle cx="610" cy="530" r="8"/><circle cx="790" cy="590" r="8"/></g>
+  <path d="M25 25h950v670H25z" fill="none" stroke="#736c56" stroke-width="2"/>
+</svg>

@@ -1,0 +1,416 @@
+{
+  "results": [
+    {
+      "landing": "view-world",
+      "worldLists": 1,
+      "summary": "14"
+    },
+    {
+      "currentWorld": {
+        "name": "Ashes of Valduna",
+        "current": "true",
+        "highlighted": true,
+        "position": "sticky",
+        "selectedCount": 1
+      }
+    },
+    {
+      "wikiOpen": true,
+      "types": {
+        "active": "view-cards",
+        "focusedType": "All"
+      },
+      "created": {
+        "title": "Dashboard QA World",
+        "count": "0",
+        "worlds": 2
+      },
+      "worldSwitch": true
+    },
+    {
+      "theme": "ocean",
+      "cards": 14,
+      "styles": {
+        ".card-name": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-desc": {
+          "color": "rgb(183, 199, 200)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-alias": {
+          "color": "rgb(157, 178, 183)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-foot": {
+          "color": "rgb(114, 139, 145)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".btn-gold": {
+          "color": "rgb(20, 35, 39)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(145deg, rgb(184, 217, 225), rgb(127, 171, 184))"
+        },
+        ".chip.active": {
+          "color": "rgb(21, 37, 41)",
+          "background": "rgb(174, 207, 215)",
+          "backgroundImage": "none"
+        },
+        ".sidebar .nav-item.active": null
+      },
+      "contrast": [
+        {
+          "selector": ".card-name",
+          "ratio": 21
+        },
+        {
+          "selector": ".card-desc",
+          "ratio": 12.02
+        },
+        {
+          "selector": ".card-alias",
+          "ratio": 9.49
+        },
+        {
+          "selector": ".card-foot",
+          "ratio": 5.82
+        },
+        {
+          "selector": ".btn-gold",
+          "ratio": 1.06
+        },
+        {
+          "selector": ".chip.active",
+          "ratio": 9.56
+        },
+        {
+          "selector": ".sidebar .nav-item.active",
+          "missing": true
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "cards": 14,
+      "styles": {
+        ".card-name": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-desc": {
+          "color": "rgb(183, 199, 200)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-alias": {
+          "color": "rgb(157, 178, 183)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-foot": {
+          "color": "rgb(114, 139, 145)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".btn-gold": {
+          "color": "rgb(20, 35, 39)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(145deg, rgb(184, 217, 225), rgb(127, 171, 184))"
+        },
+        ".chip.active": {
+          "color": "rgb(21, 37, 41)",
+          "background": "rgb(174, 207, 215)",
+          "backgroundImage": "none"
+        },
+        ".sidebar .nav-item.active": null
+      },
+      "contrast": [
+        {
+          "selector": ".card-name",
+          "ratio": 21
+        },
+        {
+          "selector": ".card-desc",
+          "ratio": 12.02
+        },
+        {
+          "selector": ".card-alias",
+          "ratio": 9.49
+        },
+        {
+          "selector": ".card-foot",
+          "ratio": 5.82
+        },
+        {
+          "selector": ".btn-gold",
+          "ratio": 1.06
+        },
+        {
+          "selector": ".chip.active",
+          "ratio": 9.56
+        },
+        {
+          "selector": ".sidebar .nav-item.active",
+          "missing": true
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "cards": 14,
+      "styles": {
+        ".card-name": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-desc": {
+          "color": "rgb(183, 199, 200)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-alias": {
+          "color": "rgb(157, 178, 183)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-foot": {
+          "color": "rgb(114, 139, 145)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".btn-gold": {
+          "color": "rgba(29, 43, 55, 0.78)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(135deg, rgb(127, 168, 195), rgb(102, 138, 163))"
+        },
+        ".chip.active": {
+          "color": "rgb(21, 37, 41)",
+          "background": "rgb(174, 207, 215)",
+          "backgroundImage": "none"
+        },
+        ".sidebar .nav-item.active": null
+      },
+      "contrast": [
+        {
+          "selector": ".card-name",
+          "ratio": 21
+        },
+        {
+          "selector": ".card-desc",
+          "ratio": 12.02
+        },
+        {
+          "selector": ".card-alias",
+          "ratio": 9.49
+        },
+        {
+          "selector": ".card-foot",
+          "ratio": 5.82
+        },
+        {
+          "selector": ".btn-gold",
+          "ratio": 1.3
+        },
+        {
+          "selector": ".chip.active",
+          "ratio": 9.56
+        },
+        {
+          "selector": ".sidebar .nav-item.active",
+          "missing": true
+        }
+      ]
+    },
+    {
+      "theme": "sepia",
+      "cards": 14,
+      "styles": {
+        ".card-name": {
+          "color": "rgb(34, 28, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-desc": {
+          "color": "rgb(183, 199, 200)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-alias": {
+          "color": "rgb(157, 178, 183)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-foot": {
+          "color": "rgb(114, 139, 145)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".btn-gold": {
+          "color": "rgb(20, 35, 39)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(145deg, rgb(184, 217, 225), rgb(127, 171, 184))"
+        },
+        ".chip.active": {
+          "color": "rgb(21, 37, 41)",
+          "background": "rgb(174, 207, 215)",
+          "backgroundImage": "none"
+        },
+        ".sidebar .nav-item.active": null
+      },
+      "contrast": [
+        {
+          "selector": ".card-name",
+          "ratio": 16.05
+        },
+        {
+          "selector": ".card-desc",
+          "ratio": 1.66
+        },
+        {
+          "selector": ".card-alias",
+          "ratio": 2.11
+        },
+        {
+          "selector": ".card-foot",
+          "ratio": 3.43
+        },
+        {
+          "selector": ".btn-gold",
+          "ratio": 1.06
+        },
+        {
+          "selector": ".chip.active",
+          "ratio": 9.56
+        },
+        {
+          "selector": ".sidebar .nav-item.active",
+          "missing": true
+        }
+      ]
+    },
+    {
+      "theme": "parchment",
+      "cards": 14,
+      "styles": {
+        ".card-name": {
+          "color": "rgb(34, 28, 20)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-desc": {
+          "color": "rgb(183, 199, 200)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-alias": {
+          "color": "rgb(157, 178, 183)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".card-foot": {
+          "color": "rgb(114, 139, 145)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none"
+        },
+        ".btn-gold": {
+          "color": "rgb(20, 35, 39)",
+          "background": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "linear-gradient(145deg, rgb(184, 217, 225), rgb(127, 171, 184))"
+        },
+        ".chip.active": {
+          "color": "rgb(21, 37, 41)",
+          "background": "rgb(174, 207, 215)",
+          "backgroundImage": "none"
+        },
+        ".sidebar .nav-item.active": null
+      },
+      "contrast": [
+        {
+          "selector": ".card-name",
+          "ratio": 16.05
+        },
+        {
+          "selector": ".card-desc",
+          "ratio": 1.66
+        },
+        {
+          "selector": ".card-alias",
+          "ratio": 2.11
+        },
+        {
+          "selector": ".card-foot",
+          "ratio": 3.43
+        },
+        {
+          "selector": ".btn-gold",
+          "ratio": 1.06
+        },
+        {
+          "selector": ".chip.active",
+          "ratio": 9.56
+        },
+        {
+          "selector": ".sidebar .nav-item.active",
+          "missing": true
+        }
+      ]
+    },
+    {
+      "view": "graph",
+      "active": "view-graph",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "view": "trees",
+      "active": "view-trees",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "view": "timeline",
+      "active": "view-timeline",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "view": "canvas",
+      "active": "view-canvas",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "view": "quill",
+      "active": "view-quill",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "view": "wiki",
+      "active": "view-wiki",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "view": "maps",
+      "active": "view-maps",
+      "textColor": "rgb(240, 244, 241)"
+    },
+    {
+      "modalVisible": true,
+      "inputColor": "rgb(240, 244, 241)",
+      "inputBackground": "rgba(11, 22, 31, 0.68)"
+    },
+    {
+      "toggleTheme": "light",
+      "focused": "new-card-button",
+      "focusOutline": "solid"
+    },
+    {
+      "mobileWidth": 390,
+      "documentWidth": 390
+    }
+  ],
+  "errors": []
+}

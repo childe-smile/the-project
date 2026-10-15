@@ -1,0 +1,54 @@
+[
+  {
+    "initial": {
+      "map": {
+        "x": 240,
+        "y": 228,
+        "width": 896,
+        "height": 764,
+        "top": 228,
+        "right": 1136,
+        "bottom": 992,
+        "left": 240
+      },
+      "menu": {
+        "x": 1146,
+        "y": 228,
+        "width": 270,
+        "height": 764,
+        "top": 228,
+        "right": 1416,
+        "bottom": 992,
+        "left": 1146
+      },
+      "pins": 4
+    }
+  },
+  {
+    "selection": "Mouse/keyboard selection, clearing, Escape, preview and Confirm passed",
+    "mapControls": "Zoom, pan, fit and pin dragging passed"
+  },
+  {
+    "templates": "Six presets, upload, saved gallery, switching and reload persistence passed",
+    "pins": "Create/remove and confirmed style persistence passed"
+  },
+  {
+    "atWidth": 900,
+    "mapWidth": 416,
+    "menuWidth": 210
+  },
+  {
+    "atWidth": 390,
+    "mapWidth": 282.59375,
+    "menuWidth": 282.59375
+  },
+  {
+    "atWidth": 320,
+    "mapWidth": 215,
+    "menuWidth": 215
+  },
+  {
+    "emptyWorld": true,
+    "browserErrors": []
+  }
+]

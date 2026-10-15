@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex — Worldbuilding Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/design-refresh.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/workspace.css">
+  <link rel="stylesheet" href="css/maps.css">
+  <link rel="stylesheet" href="css/radio.css">
+</head>
+
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button
+        class="sidebar-toggle"
+        id="sidebar-toggle"
+        type="button"
+        aria-label="Hide navigation menu"
+        aria-controls="primary-sidebar"
+        aria-expanded="true"
+        title="Hide navigation menu"
+      >
+        <span aria-hidden="true"></span>
+      </button>
+
+      <button class="brand" id="world-overview-button" type="button" aria-label="Open world overview">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-name serif">Codex</div>
+      </button>
+
+      <label class="search">
+        <span class="ui-icon ui-icon-search search-icon" aria-hidden="true"></span>
+
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search lore, properties, relationships..."
+          autocomplete="off"
+        >
+      </label>
+
+<div class="topbar-right">
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to light mode"
+          title="Switch to light mode"
+        >
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Light Mode</span>
+        </button>
+        <button
+          class="btn btn-gold"
+          id="new-card-button"
+          type="button"
+        >
+          <span class="btn-icon" aria-hidden="true">+</span> New Card
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="primary-sidebar">
+      <div class="nav-label">Build</div>
+
+      <button
+        class="nav-item"
+        data-view="cards"
+        type="button"
+      >
+        <span class="nav-item-icon ui-icon ui-icon-grid" aria-hidden="true"></span>
+        <span>Workspace</span>
+        <span class="nav-badge" id="cards-count">0</span>
+      </button>
+
+      <button class="nav-item" data-view="graph" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-network" aria-hidden="true"></span>
+        <span>The Web</span>
+      </button>
+
+      <button class="nav-item" data-view="maps" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-map" aria-hidden="true"></span>
+        <span>Maps</span>
+      </button>
+
+      <button class="nav-item" data-view="trees" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-tree" aria-hidden="true"></span>
+        <span>Relation Tree</span>
+      </button>
+
+      <button class="nav-item" data-view="canvas" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-pin" aria-hidden="true"></span>
+        <span>Canvas</span>
+      </button>
+
+      <button class="nav-item" data-view="timeline" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-timeline" aria-hidden="true"></span>
+        <span>Timeline</span>
+      </button>
+
+      <div class="nav-label">Write & Publish</div>
+
+      <button class="nav-item" data-view="quill" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-pen" aria-hidden="true"></span>
+        <span>Quill</span>
+      </button>
+
+      <button class="nav-item" data-view="wiki" type="button">
+        <span class="nav-item-icon ui-icon ui-icon-book" aria-hidden="true"></span>
+        <span>Wiki</span>
+      </button>
+      <section class="sidebar-worlds" aria-labelledby="sidebar-worlds-title">
+        <h2 id="sidebar-worlds-title">Worlds</h2>
+        <div class="sidebar-worlds-box">
+          <div class="world-list" id="world-list"></div>
+          <button class="world-create-button" id="new-world-button" type="button">Create New World</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="view active" id="view-world" aria-labelledby="world-overview-title">
+        <div class="dashboard-content">
+          <section class="world-hero">
+            <div class="world-hero-content">
+              <p class="world-kicker" id="world-slogan">Your world, connected.</p>
+              <h1 class="world-title" id="world-overview-title">Ashes of Valduna</h1>
+              <p class="world-description" id="world-description">A world of stories, characters, places, and histories, ready for you to shape.</p>
+              <button class="btn btn-gold" id="world-overview-new-wiki" type="button">New Wiki Entry</button>
+            </div>
+          </section>
+          <div class="world-overview-grid">
+            <section class="world-overview-panel world-summary" aria-labelledby="world-summary-title">
+              <h2 id="world-summary-title">World Summary</h2>
+              <div class="world-summary-body">
+                <dl class="world-stats">
+                  <div><dt>Cards</dt><dd id="world-overview-card-count">0</dd></div>
+                  <div><dt>Connections</dt><dd id="world-overview-relationship-count">0</dd></div>
+                  <div><dt>Card Types</dt><dd id="world-overview-type-count">0</dd></div>
+                </dl>
+                <div class="world-summary-actions">
+                  <button class="btn btn-secondary" data-world-destination="graph" type="button">See Connections</button>
+                  <button class="btn btn-secondary" id="manage-card-types" type="button">Manage Types</button>
+                </div>
+              </div>
+            </section>
+            <section class="world-overview-panel world-explore" aria-labelledby="world-explore-title">
+              <h2 id="world-explore-title">Start Exploring</h2>
+              <div class="world-overview-links">
+                <button class="world-overview-link" data-world-destination="cards" type="button">Browse Cards</button>
+                <button class="world-overview-link" data-world-destination="graph" type="button">Explore The Web</button>
+                <button class="world-overview-link" data-world-destination="timeline" type="button">Read Timeline</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-cards">
+        <div class="view-head">
+          <div class="view-eyebrow">Workspace</div>
+          <h1 class="view-title serif">Cards</h1>
+
+        </div>
+
+        <div class="cards-toolbar">
+          <p class="cards-summary" id="cards-summary">
+            Showing 0 of 0 cards
+          </p>
+          <label class="cards-sort-label">
+            <span>Sort by</span>
+            <select id="cards-sort" class="cards-sort">
+              <option value="updated">Recently updated</option>
+              <option value="name">Name</option>
+              <option value="type">Type</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filter-row" id="filter-row"></div>
+        <div class="card-grid" id="card-grid"></div>
+
+        <p class="empty-state" id="empty-state" hidden>
+          No cards found.
+        </p>
+      </section>
+
+      <section class="view" id="view-graph">
+        <div class="view-head">
+          <div class="view-eyebrow">The Web</div>
+          <h1 class="view-title serif">World Graph</h1>
+          <p class="view-sub">Explore celestial links connecting characters, places, and factions across your universe.</p>
+        </div>
+
+        <div class="graph-wrapper">
+          <svg
+            id="graph-svg"
+            viewBox="0 0 900 480"
+            aria-label="Relationship graph"
+          ></svg>
+        </div>
+      </section>
+
+      <section class="view" id="view-maps">
+        <div class="view-head">
+          <div class="view-eyebrow">Cartography</div>
+          <h1 class="view-title serif">Maps</h1>
+        </div>
+
+        <div class="map-workspace">
+          <div class="map-canvas-visual" role="region" aria-label="Interactive world map" tabindex="0">
+            <img class="map-template-image" id="map-template-image" src="assets/images/maps/world-map.png" alt="" draggable="false">
+            <!-- Medieval Compass Rose SVG Overlay -->
+            <div class="map-compass-rose" aria-hidden="true">
+              <svg viewBox="0 0 100 100" width="84" height="84" fill="none" stroke="currentColor">
+                <circle cx="50" cy="50" r="46" stroke="rgba(207, 171, 93, 0.4)" stroke-width="1.2" stroke-dasharray="2 4"/>
+                <circle cx="50" cy="50" r="38" stroke="rgba(207, 171, 93, 0.3)" stroke-width="0.8"/>
+                <circle cx="50" cy="50" r="4" fill="rgba(207, 171, 93, 0.8)"/>
+                <!-- Points -->
+                <polygon points="50,6 54,42 50,46 46,42" fill="rgba(207, 171, 93, 0.85)"/>
+                <polygon points="50,94 54,58 50,54 46,58" fill="rgba(207, 171, 93, 0.4)"/>
+                <polygon points="94,50 58,54 54,50 58,46" fill="rgba(207, 171, 93, 0.55)"/>
+                <polygon points="6,50 42,54 46,50 42,46" fill="rgba(207, 171, 93, 0.55)"/>
+                <!-- Diagonal secondary points -->
+                <polygon points="81,19 55,45 50,50 45,55" fill="rgba(207, 171, 93, 0.3)"/>
+                <polygon points="19,81 45,55 50,50 55,45" fill="rgba(207, 171, 93, 0.25)"/>
+                <polygon points="81,81 55,55 50,50 45,45" fill="rgba(207, 171, 93, 0.25)"/>
+                <polygon points="19,19 45,45 50,50 55,55" fill="rgba(207, 171, 93, 0.3)"/>
+                <text x="50" y="16" text-anchor="middle" font-family="'Cinzel', serif" font-size="9" font-weight="700" fill="rgba(243, 212, 137, 0.95)">N</text>
+              </svg>
+            </div>
+            <div class="map-zoom-controls" aria-label="Map zoom controls">
+              <button id="map-zoom-in" type="button" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6m-3-3v6"/></svg></button>
+              <button id="map-fit" type="button" aria-label="Fit map" title="Fit map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></button>
+              <button id="map-zoom-out" type="button" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6"/></svg></button>
+            </div>
+            <output id="map-zoom-level" aria-live="polite" aria-label="Map zoom">100%</output>
+          </div>
+
+          <aside class="map-inspector" aria-label="Map menu">
+            <section class="pin-customizer" id="pin-customizer" aria-labelledby="pin-customizer-title" hidden>
+              <div class="map-section-heading"><h2 id="pin-customizer-title">Selected Pin</h2><button id="map-clear-selection" type="button" aria-label="Clear selected pin" title="Clear selected pin">×</button></div>
+              <div class="map-marker-info" id="map-marker-info"></div>
+              <div class="pin-customizer-grid">
+                <label><span>Color</span><input id="map-pin-color" type="color" value="#7fa8c3"></label>
+                <label><span>Size</span><select id="map-pin-size"><option value="small">Small</option><option value="medium" selected>Medium</option><option value="large">Large</option></select></label>
+              </div>
+              <div class="map-shape-label" id="map-shape-label">Shape</div>
+              <input id="map-pin-shape" type="hidden" value="rounded">
+              <div class="map-shape-picker" role="group" aria-labelledby="map-shape-label">
+                <button type="button" data-pin-shape="rounded" aria-label="Rounded" aria-pressed="true" title="Rounded"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="circle" aria-label="Circle" aria-pressed="false" title="Circle"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="square" aria-label="Square" aria-pressed="false" title="Square"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="diamond" aria-label="Diamond" aria-pressed="false" title="Diamond"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="hexagon" aria-label="Hexagon" aria-pressed="false" title="Hexagon"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="triangle" aria-label="Triangle" aria-pressed="false" title="Triangle"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="star" aria-label="Star" aria-pressed="false" title="Star"><span class="map-shape-icon"></span></button>
+                <button type="button" data-pin-shape="pin" aria-label="Map pin" aria-pressed="false" title="Map pin"><span class="map-shape-icon"></span></button>
+              </div>
+              <button class="btn btn-gold" id="map-pin-confirm" type="button">Confirm</button>
+              <p id="map-pin-style-status" role="status" aria-live="polite"></p>
+            </section>
+
+            <section class="map-pin-creator" aria-labelledby="map-create-pin-title">
+              <h2 id="map-create-pin-title">Create Map Pin</h2>
+              <div class="map-pin-creator-grid">
+                <input id="map-new-pin-name" maxlength="60" placeholder="Pin name" aria-label="Pin name">
+                <select id="map-new-pin-type" aria-label="Pin type">
+                  <option value="Landmark">Landmark</option><option value="City">City</option><option value="Port">Port</option><option value="Ruins">Ruins</option>
+                </select>
+              </div>
+              <label class="map-pin-image-input" for="map-new-pin-image"><span id="map-pin-image-label">Choose Pin Icon</span><input id="map-new-pin-image" type="file" accept="image/*"></label>
+              <button class="btn btn-secondary" id="map-add-pin" type="button">+ Add Pin</button>
+            </section>
+
+            <section class="map-template-section" aria-labelledby="map-templates-title">
+              <h2 id="map-templates-title">Map Templates</h2>
+              <div class="map-template-grid" id="map-template-grid">
+              <button class="map-template active" data-map-template="assets/images/maps/world-map.png" type="button"><img src="assets/images/maps/world-map.png" alt="Continental atlas template"><span>Continental</span></button>
+              <button class="map-template" data-map-template="assets/images/maps/templates/coastal-realm.png" type="button"><img src="assets/images/maps/templates/coastal-realm.png" alt="Coastal realm template"><span>Coastal Realm</span></button>
+              <button class="map-template" data-map-template="assets/images/maps/templates/inland-kingdoms.png" type="button"><img src="assets/images/maps/templates/inland-kingdoms.png" alt="Inland kingdoms template"><span>Inland</span></button>
+              <button class="map-template" data-map-template="assets/images/maps/templates/storm-archipelago.png" type="button"><img src="assets/images/maps/templates/storm-archipelago.png" alt="Storm archipelago template"><span>Archipelago</span></button>
+                <button class="map-template" data-map-template="assets/images/maps/templates/riverlands.svg" type="button"><img src="assets/images/maps/templates/riverlands.svg" alt="Riverlands template"><span>Riverlands</span></button>
+                <button class="map-template" data-map-template="assets/images/maps/templates/highlands.svg" type="button"><img src="assets/images/maps/templates/highlands.svg" alt="Highlands template"><span>Highlands</span></button>
+              </div>
+              <button class="map-menu-button" id="map-previous-uploads" type="button" aria-expanded="false" aria-controls="map-uploaded-templates">See Previous Uploads</button>
+              <div id="map-uploaded-templates" hidden></div>
+              <label class="map-menu-button map-template-upload" for="map-template-upload"><span>Upload New Template</span><input id="map-template-upload" type="file" accept="image/*"></label>
+              <p class="map-upload-status" id="map-upload-status" role="status" aria-live="polite"></p>
+            </section>
+
+            <details class="map-tools"><summary>Map tools</summary>
+            <div class="map-layer-buttons">
+              <button class="map-layer active" data-map-layer="borders" type="button">Kingdom borders</button>
+              <button class="map-layer" data-map-layer="routes" type="button">Travel routes</button>
+              <button class="map-layer" data-map-layer="landmarks" type="button">Landmarks</button>
+            </div>
+
+            <div class="map-inspector-legend">
+              <div class="legend-item"><span class="legend-dot legend-city"></span> City</div>
+              <div class="legend-item"><span class="legend-dot legend-landmark"></span> Landmark</div>
+              <div class="legend-item"><span class="legend-dot legend-port"></span> Port</div>
+            </div>
+
+            <button class="map-reset-button" type="button">⟲ Reset pins</button>
+            <div class="map-inspector-summary" id="map-summary">
+              Click a marker to inspect a location and open its card.
+            </div>
+            </details>
+
+            <div class="map-inspector-note">
+              <strong>Royal Cartographer's Tip</strong>
+              Use location cards to anchor places on your map and bring your world geography to life.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-trees">
+        <div class="view-head">
+          <div class="view-eyebrow">Genealogy</div>
+          <h1 class="view-title serif">Relation Trees</h1>
+          <p class="view-sub">Trace lineages, alliances, and connections outward from any root entity.</p>
+        </div>
+
+        <div class="tree-controls">
+          <label class="tree-root-label" for="tree-root-select">Root entity</label>
+          <select id="tree-root-select" class="tree-root-select"></select>
+        </div>
+
+        <p class="empty-state" id="tree-empty-hint">Select a root card above to reveal its relationship tree.</p>
+        <div class="tree-wrapper">
+          <svg
+            id="tree-svg"
+            viewBox="0 0 900 380"
+          ></svg>
+        </div>
+      </section>
+
+      <section class="view" id="view-timeline">
+        <div class="view-head">
+          <div class="view-eyebrow">Chronology</div>
+          <h1 class="view-title serif">Timelines</h1>
+          <p class="view-sub">Chronicle the great epochs, wars, coronations, and cataclysms of your world.</p>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-container"></div>
+      </section>
+
+      <section class="view" id="view-canvas">
+        <div class="view-head">
+          <div class="view-eyebrow">Freeform Board</div>
+          <h1 class="view-title serif">Canvas</h1>
+          <p class="view-sub">Pin parchment notes, weave story threads, and plan scene arcs visually.</p>
+        </div>
+
+        <div class="canvas-toolbar">
+          <button class="btn btn-secondary" id="canvas-add-note" type="button">+ Add parchment note</button>
+        </div>
+
+        <div class="canvas-board"></div>
+      </section>
+
+      <section class="view" id="view-quill">
+        <div class="view-head">
+          <div class="view-eyebrow">Narrative Editor</div>
+          <h1 class="view-title serif">Quill</h1>
+          <p class="view-sub">Write chapters, lore excerpts, and scene logs on a focused dark manuscript.</p>
+        </div>
+
+        <div class="editor-layout">
+          <aside class="editor-outline">
+            <div class="world-panel-label">Manuscript drafts</div>
+            <div class="editor-outline-list" id="quill-drafts-list"></div>
+            <button class="btn btn-secondary editor-add-draft" id="new-quill-draft-button" type="button">
+              + New draft
+            </button>
+          </aside>
+
+          <article class="editor-sheet">
+            <div class="editor-toolbar">
+              <button type="button" data-action="bold" aria-label="Bold"><strong>B</strong></button>
+              <button type="button" data-action="italic" aria-label="Italic"><em>I</em></button>
+              <button type="button" data-action="underline" aria-label="Underline"><span>U</span></button>
+              <button type="button" data-action="formatBlock" data-value="H2" aria-label="Heading">H2</button>
+              <button type="button" data-action="blockquote" aria-label="Quote">“</button>
+              <button type="button" data-action="code" aria-label="Code">&lt;/&gt;</button>
+              <button class="btn btn-secondary" id="quill-export-button" type="button">Export</button>
+              <span class="editor-status-note">Drafts save automatically.</span>
+            </div>
+
+            <div class="editor-sheet-head">
+              <div>
+                <h2>Compose your chronicle</h2>
+                <p class="view-sub">Write chapters, scene notes, and character logs inside a focused narrative canvas.</p>
+              </div>
+              <div class="editor-meta" id="quill-meta"></div>
+            </div>
+
+            <label class="editor-title-label" for="quill-title">Draft title</label>
+            <input id="quill-title" class="editor-title serif" type="text" placeholder="Untitled manuscript" autocomplete="off" />
+
+            <div
+              id="quill-editor"
+              class="editor-content"
+              contenteditable="true"
+              spellcheck="false"
+              aria-label="Quill editor"
+            ></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="view-wiki">
+        <div class="view-head">
+          <div class="view-eyebrow">Grimoire & Publishing</div>
+          <h1 class="view-title serif">Wiki</h1>
+          <p class="view-sub">Publish your world archive as an illustrated living compendium.</p>
+        </div>
+
+        <div class="wiki-layout">
+          <section class="wiki-hero">
+            <div class="wiki-hero-content">
+              <p class="world-kicker">Living Encyclopedia</p>
+              <h2>Publish your world as an illuminated compendium</h2>
+              <p>Collect character profiles, locations, and lore in a clean, expandable archive for instant reference.</p>
+            </div>
+          </section>
+
+          <section class="wiki-collection">
+            <div class="wiki-section-head">
+              <div>
+                <h2>Highlighted entries</h2>
+                <p class="view-sub">Your workspace cards automatically populate this compendium. Select an entry to view full lore.</p>
+              </div>
+              <button class="btn btn-gold" id="create-wiki-entry-button" type="button">+ Create wiki entry</button>
+            </div>
+            <div class="wiki-entry-grid" id="wiki-entry-grid"></div>
+            <p class="empty-state wiki-empty-state" id="wiki-empty" hidden>
+              No wiki entries yet. Create a new card or browse workspace cards to populate this compendium.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Card details drawer -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <header class="drawer-head">
+      <button
+        class="drawer-close"
+        id="drawer-close"
+        type="button"
+        aria-label="Close panel"
+      >
+        ✕
+      </button>
+
+      <div class="drawer-header-row">
+        <div class="drawer-avatar" id="drawer-avatar"></div>
+        <div class="drawer-header-info">
+          <div class="drawer-type" id="drawer-type"></div>
+          <h2 class="drawer-name serif" id="drawer-name"></h2>
+          <div class="drawer-alias" id="drawer-alias"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer-actions">
+      <button class="btn" id="edit-card-button" type="button">
+        Edit
+      </button>
+
+      <button class="btn btn-danger" id="delete-card-button" type="button">
+        Delete
+      </button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="props" type="button">
+        Properties
+      </button>
+
+      <button class="tab" data-tab="rels" type="button">
+        Relationships
+      </button>
+
+      <button class="tab" data-tab="text" type="button">
+        Text & Lore
+      </button>
+    </div>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="pane-props"></div>
+      <div class="tab-pane" id="pane-rels"></div>
+      <div class="tab-pane" id="pane-text"></div>
+    </div>
+  </aside>
+
+  <!-- Create/edit modal -->
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <section
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <header class="modal-header">
+        <h2 class="serif" id="modal-title">New Card</h2>
+
+        <button
+          class="modal-close"
+          id="modal-close"
+          type="button"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+      </header>
+
+      <form id="card-form">
+        <input type="hidden" id="card-id">
+
+        <label class="form-field">
+          <span>Name</span>
+          <input id="card-name" required maxlength="80" placeholder="e.g. Citadel of Highreach">
+        </label>
+
+        <label class="form-field">
+          <span>Type</span>
+
+          <select id="card-type" required>
+            <option value="Character">Character</option>
+            <option value="Event">Event</option>
+            <option value="City">City</option>
+            <option value="Location">Location</option>
+            <option value="Kingdom">Kingdom</option>
+            <option value="Faction">Faction</option>
+            <option value="Item">Item</option>
+            <option value="Creature">Creature</option>
+            <option value="Magic">Magic</option>
+            <optgroup label="Lore">
+              <option value="Religion">Religion</option>
+              <option value="Legend">Legend</option>
+              <option value="Magic System">Magic System</option>
+            </optgroup>
+            <option value="Organization">Organization</option>
+          </select>
+        </label>
+
+        <label class="form-field">
+          <span>Alias or title</span>
+          <input id="card-alias" maxlength="100" placeholder="e.g. Seat of the Moon King">
+        </label>
+
+        <section class="card-detail-section" id="card-detail-section" aria-labelledby="card-detail-title">
+          <div class="card-detail-heading">
+            <div>
+              <span class="portrait-picker-eyebrow" id="card-detail-title">Type details</span>
+              <p>Structured fields tailored to this card type.</p>
+            </div>
+          </div>
+          <div class="card-detail-grid" id="card-detail-grid"></div>
+        </section>
+
+        <div class="form-row" hidden>
+          <label class="form-field">
+            <span>Icon</span>
+            <input id="card-icon" maxlength="3" placeholder="✦" aria-label="Card icon">
+          </label>
+
+          <label class="form-field">
+            <span>Image URL</span>
+            <input id="card-image" type="url" placeholder="https://..." aria-label="Card image URL">
+          </label>
+        </div>
+
+        <!-- Character portrait picker — shown only when Type = Character -->
+        <div id="portrait-picker" class="portrait-picker" hidden>
+          <div class="portrait-picker-label">
+            <span class="portrait-picker-eyebrow"><span class="ui-icon ui-icon-user" aria-hidden="true"></span> Choose Portrait</span>
+            <label class="portrait-upload-btn" id="portrait-upload-label" title="Upload your own image">
+              <input type="file" id="portrait-upload" accept="image/*" hidden>
+              <span class="portrait-upload-icon">↑</span>
+              Upload
+            </label>
+          </div>
+
+          <div class="portrait-picker-grid" id="portrait-picker-grid">
+            <button type="button" class="portrait-option" data-portrait="assets/images/characters/character-1.jpg" aria-label="Warrior Captain">
+              <img src="assets/images/characters/character-1.jpg" alt="Warrior Captain" draggable="false">
+              <span>Captain</span>
+            </button>
+            <button type="button" class="portrait-option" data-portrait="assets/images/characters/character-2.jpg" aria-label="Sentinel">
+              <img src="assets/images/characters/character-2.jpg" alt="Sentinel" draggable="false">
+              <span>Sentinel</span>
+            </button>
+            <button type="button" class="portrait-option" data-portrait="assets/images/characters/character-3.jpg" aria-label="Archmage">
+              <img src="assets/images/characters/character-3.jpg" alt="Archmage" draggable="false">
+              <span>Archmage</span>
+            </button>
+            <button type="button" class="portrait-option" data-portrait="assets/images/characters/character-4.jpg" aria-label="Regent">
+              <img src="assets/images/characters/character-4.jpg" alt="Regent" draggable="false">
+              <span>Regent</span>
+            </button>
+            <!-- Custom uploaded portrait slot — hidden until an image is uploaded -->
+            <button type="button" class="portrait-option portrait-custom" id="portrait-custom-slot" hidden aria-label="Custom uploaded portrait">
+              <img id="portrait-custom-img" src="" alt="Custom" draggable="false">
+              <span>Custom</span>
+            </button>
+          </div>
+
+          <!-- Drop zone hint -->
+          <p class="portrait-drop-hint">or drag &amp; drop an image anywhere above</p>
+        </div>
+
+        <!-- Location image picker — shown for place cards -->
+        <div id="location-picker" class="portrait-picker location-picker" hidden>
+          <div class="portrait-picker-label">
+            <span class="portrait-picker-eyebrow"><span class="ui-icon ui-icon-map-pin" aria-hidden="true"></span> Choose Location Image</span>
+          </div>
+
+          <div class="portrait-picker-grid location-picker-grid" id="location-picker-grid">
+            <button type="button" class="portrait-option" data-location-image="assets/images/locations/location-1.jpg" aria-label="Citadel">
+              <img src="assets/images/locations/location-1.jpg" alt="Citadel" draggable="false">
+              <span>Citadel</span>
+            </button>
+            <button type="button" class="portrait-option" data-location-image="assets/images/locations/location-2.jpg" aria-label="Storm Coast">
+              <img src="assets/images/locations/location-2.jpg" alt="Storm Coast" draggable="false">
+              <span>Storm Coast</span>
+            </button>
+            <button type="button" class="portrait-option" data-location-image="assets/images/locations/location-3.jpg" aria-label="Harbor Village">
+              <img src="assets/images/locations/location-3.jpg" alt="Harbor Village" draggable="false">
+              <span>Harbor</span>
+            </button>
+            <button type="button" class="portrait-option" data-location-image="assets/images/locations/world-map.png" aria-label="World Map">
+              <img src="assets/images/locations/world-map.png" alt="World Map" draggable="false">
+              <span>World Map</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="type-icon-picker" class="portrait-picker type-icon-picker">
+          <div class="portrait-picker-label">
+            <span class="portrait-picker-eyebrow">Card Type Icons</span>
+            <span class="portrait-picker-hint">Four unique options for this type</span>
+          </div>
+          <div class="portrait-picker-grid" id="type-icon-picker-grid"></div>
+        </div>
+
+        <label class="form-field">
+          <span>Short summary</span>
+          <textarea id="card-description" required maxlength="250" placeholder="A concise overview of this entity in your world..."></textarea>
+        </label>
+
+        <label class="form-field">
+          <span>Full Lore & Chronicles</span>
+          <textarea id="card-text" rows="7" placeholder="Detailed histories, quotes, clan laws, secrets, or backstories..."></textarea>
+        </label>
+
+        <footer class="modal-actions">
+          <button class="btn" id="cancel-card-button" type="button">
+            Cancel
+          </button>
+
+          <button class="btn btn-gold" id="card-submit-button" type="submit">
+            Save Card
+          </button>
+        </footer>
+      </form>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="wiki-entry-modal-backdrop" hidden>
+    <section class="modal wiki-entry-modal" role="dialog" aria-modal="true" aria-labelledby="wiki-entry-modal-title">
+      <header class="modal-header wiki-entry-modal-header">
+        <div>
+          <span class="view-eyebrow">Living Archive</span>
+          <h2 class="serif" id="wiki-entry-modal-title">New wiki entry</h2>
+        </div>
+        <button class="modal-close" id="wiki-entry-modal-close" type="button" aria-label="Close">×</button>
+      </header>
+      <form id="wiki-entry-form">
+        <div class="wiki-entry-form-intro">
+          <strong>Archive a piece of your world</strong>
+          <p>Write a publishable article with its own section, synopsis, source notes, and cover artwork.</p>
+        </div>
+        <label class="form-field wiki-entry-title-field">
+          <span>Entry title</span>
+          <input id="wiki-entry-title" required maxlength="100" placeholder="e.g. The Drowning of Blackport">
+        </label>
+        <label class="form-field">
+          <span>Archive section</span>
+          <select id="wiki-entry-section" required>
+            <option value="Chronicle">Chronicle</option>
+            <option value="Place">Place</option>
+            <option value="Person">Person</option>
+            <option value="Faction">Faction</option>
+            <option value="Artifact">Artifact</option>
+            <option value="Belief">Belief & Lore</option>
+          </select>
+        </label>
+        <label class="form-field">
+          <span>Reading label</span>
+          <input id="wiki-entry-label" maxlength="80" placeholder="e.g. A coastal history">
+        </label>
+        <label class="form-field wiki-entry-wide">
+          <span>Synopsis</span>
+          <textarea id="wiki-entry-summary" required maxlength="320" rows="3" placeholder="A concise introduction shown in the archive collection..."></textarea>
+        </label>
+        <label class="form-field wiki-entry-wide wiki-article-field">
+          <span>Article</span>
+          <textarea id="wiki-entry-article" required rows="10" placeholder="Write the complete history, account, doctrine, or reference entry..."></textarea>
+        </label>
+        <label class="form-field wiki-entry-wide wiki-source-field">
+          <span>Source notes</span>
+          <textarea id="wiki-entry-sources" rows="4" placeholder="In-world records, witnesses, disputed versions..."></textarea>
+        </label>
+        <label class="wiki-cover-field">
+          <span class="portrait-picker-eyebrow">Cover artwork</span>
+          <input id="wiki-entry-cover" type="file" accept="image/*">
+          <small>Optional image used by the illustrated archive entry.</small>
+        </label>
+        <footer class="modal-actions wiki-entry-actions">
+          <button class="btn" id="wiki-entry-cancel" type="button">Cancel</button>
+          <button class="btn btn-gold" type="submit">Publish entry</button>
+        </footer>
+      </form>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="world-modal-backdrop" hidden>
+    <section class="modal world-modal" role="dialog" aria-modal="true" aria-labelledby="world-modal-title">
+      <header class="modal-header">
+        <h2 class="serif" id="world-modal-title">New Realm</h2>
+        <button class="modal-close" id="world-modal-close" type="button" aria-label="Close">×</button>
+      </header>
+      <form id="world-form">
+        <label class="form-field">
+          <span>Realm name</span>
+          <input id="world-input" required maxlength="80" placeholder="E.g. The Amber Isles">
+        </label>
+        <p class="form-hint">Your new realm starts empty and keeps its own cards, timelines, and drafts.</p>
+        <footer class="modal-actions">
+          <button class="btn" id="cancel-world-button" type="button">Cancel</button>
+          <button class="btn btn-gold" type="submit">Create Realm</button>
+        </footer>
+      </form>
+    </section>
+  </div>
+
+  <script type="module" src="./js/app/main.js"></script>
+</body>
+</html>

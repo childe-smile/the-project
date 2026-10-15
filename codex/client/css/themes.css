@@ -1,0 +1,92 @@
+/* ============================================================
+   THEMES — Medieval Slate, Illuminated Vellum & Obsidian
+   ============================================================ */
+
+/* ---------- ILLUMINATED VELLUM / SEPIA MODE ---------- */
+[data-theme="sepia"],
+[data-theme="parchment"] {
+  --bg: #f4eee2;
+  --surface: #fdfbf7;
+  --surface-2: #f2ebd9;
+  --surface-3: #e5dcbf;
+  --surface-overlay: rgba(253, 251, 247, 0.92);
+  --line: rgba(168, 134, 66, 0.25);
+  --line-soft: rgba(168, 134, 66, 0.12);
+  --line-strong: rgba(168, 134, 66, 0.55);
+  --text: #24201a;
+  --text-soft: #4a4337;
+  --muted: #786f5e;
+  --muted-2: #a49984;
+  --gold: #b3883b;
+  --gold-bright: #8f651c;
+  --gold-dim: #6e501a;
+  --gold-gradient: linear-gradient(135deg, #caa359 0%, #a47b2e 100%);
+  --gold-glow: rgba(179, 136, 59, 0.2);
+  --shadow-small: 0 6px 20px rgba(60, 45, 30, 0.08);
+  --shadow-large: 0 24px 64px rgba(60, 45, 30, 0.14);
+}
+
+[data-theme="sepia"] .card,
+[data-theme="parchment"] .card {
+  background: #fcf9f2;
+}
+
+[data-theme="sepia"] .card-name,
+[data-theme="parchment"] .card-name,
+[data-theme="sepia"] .view-title,
+[data-theme="parchment"] .view-title,
+[data-theme="sepia"] .world-title,
+[data-theme="parchment"] .world-title {
+  color: #221c14;
+}
+
+/* ---------- ROYAL OBSIDIAN / DEEP DARK MODE ---------- */
+[data-theme="dark"] {
+  --bg: #0b0d11;
+  --surface: #12151b;
+  --surface-2: #181d26;
+  --surface-3: #222936;
+  --surface-overlay: rgba(18, 21, 27, 0.92);
+  --line: rgba(224, 185, 102, 0.22);
+  --line-soft: rgba(224, 185, 102, 0.1);
+  --line-strong: rgba(224, 185, 102, 0.5);
+  --text: #f8f6f0;
+  --text-soft: #d8d2c4;
+  --muted: #9c9484;
+  --muted-2: #6c6556;
+  --gold: #dfb864;
+  --gold-bright: #fbe09e;
+  --gold-dim: #967634;
+  --gold-glow: rgba(223, 184, 100, 0.28);
+}
+
+/* ---------- BLUE VELLUM / LIGHT MODE ---------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #c9dbe6;
+  --surface: #dce8ed;
+  --surface-2: #cadce5;
+  --surface-3: #b8cfdb;
+  --surface-overlay: rgba(214, 229, 236, 0.95);
+  --line: rgba(43, 72, 96, 0.32);
+  --line-soft: rgba(43, 72, 96, 0.2);
+  --line-strong: rgba(38, 72, 100, 0.55);
+  --text: #142b3a;
+  --text-soft: #334f62;
+  --muted: #536c7c;
+  --muted-2: #718795;
+  --gold: #2f709e;
+  --gold-bright: #1f5f8d;
+  --gold-dim: #4f82a6;
+  --gold-gradient: linear-gradient(135deg, #8ab8d2, #568daf);
+  --gold-gradient-hover: linear-gradient(135deg, #9cc6dd, #679bbc);
+  --gold-glow: transparent;
+  --blue: #527fa5;
+  --blue-bright: #78a6c7;
+  --parchment: #eee7d9;
+  --parchment-soft: #e2d9c7;
+  --arcane: #8987b8;
+  --sage: #829d8b;
+  --shadow-small: 0 8px 22px rgba(30, 55, 73, 0.14);
+  --shadow-large: 0 22px 58px rgba(30, 55, 73, 0.22);
+}

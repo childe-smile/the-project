@@ -1,0 +1,29 @@
+[
+  {
+    "phase": "paused",
+    "status": "Ready · Press play in Spotify",
+    "frame": ""
+  },
+  {
+    "backgroundPlayback": {
+      "time": 2.567949,
+      "paused": false,
+      "same": true,
+      "creates": 1,
+      "destroys": 0,
+      "loads": []
+    }
+  },
+  {
+    "drag": "Pointer and keyboard movement, clamping, iframe alignment passed"
+  },
+  {
+    "spotifyLinks": "Validation, metadata, presets passed"
+  },
+  {
+    "mobile": "Touch drag, viewport bounds, 25px dial and saved minimized state passed"
+  },
+  {
+    "browserErrors": []
+  }
+]

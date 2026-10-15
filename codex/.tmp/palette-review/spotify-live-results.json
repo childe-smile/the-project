@@ -1,0 +1,39 @@
+[
+  {
+    "phase": "paused",
+    "status": "Ready · Press play in Spotify",
+    "frame": "https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=iframe-api"
+  },
+  {
+    "phase": "paused",
+    "frame": "https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U?utm_source=iframe-api"
+  },
+  {
+    "livePlayback": {
+      "phase": "playing",
+      "update": {
+        "isPaused": false,
+        "isBuffering": false,
+        "duration": 29713,
+        "position": 0,
+        "playingURI": "spotify:track:0ofHAoxe9vBkTCp2UQIavz"
+      }
+    }
+  },
+  {
+    "liveBackgroundPlayback": {
+      "phase": "playing",
+      "update": {
+        "isPaused": false,
+        "isBuffering": false,
+        "duration": 29713,
+        "position": 3054,
+        "playingURI": "spotify:track:0ofHAoxe9vBkTCp2UQIavz"
+      },
+      "sameFrame": true
+    }
+  },
+  {
+    "browserErrors": []
+  }
+]

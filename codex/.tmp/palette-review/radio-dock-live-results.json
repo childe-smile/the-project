@@ -1,0 +1,54 @@
+[
+  {
+    "phase": "playing",
+    "station": "Antyradio",
+    "status": "Poland",
+    "src": "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
+  },
+  {
+    "dockAtWidth": 1440,
+    "searchRight": 698,
+    "buttonLeft": 712,
+    "buttonRight": 803.5625
+  },
+  {
+    "dockAtWidth": 900,
+    "searchRight": 518.890625,
+    "buttonLeft": 532.890625,
+    "buttonRight": 624.453125
+  },
+  {
+    "dockAtWidth": 768,
+    "searchRight": 472.875,
+    "buttonLeft": 486.875,
+    "buttonRight": 578.4375
+  },
+  {
+    "dockAtWidth": 680,
+    "searchRight": 622,
+    "buttonLeft": 630,
+    "buttonRight": 668
+  },
+  {
+    "dockAtWidth": 390,
+    "searchRight": 332,
+    "buttonLeft": 340,
+    "buttonRight": 378
+  },
+  {
+    "dockAtWidth": 320,
+    "searchRight": 262,
+    "buttonLeft": 270,
+    "buttonRight": 308
+  },
+  {
+    "backgroundPlayback": {
+      "time": 3.762486,
+      "paused": false,
+      "same": true
+    }
+  },
+  {
+    "browserErrors": []
+  }
+]

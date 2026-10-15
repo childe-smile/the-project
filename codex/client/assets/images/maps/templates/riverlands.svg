@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720">
+  <defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0v60" fill="none" stroke="#777a68" opacity=".16"/></pattern><pattern id="trees" width="28" height="28" patternUnits="userSpaceOnUse"><path d="m14 3-7 13h14zm0 10v9" fill="#4f6952" stroke="#485e4c" stroke-width="2"/></pattern></defs>
+  <path fill="#d3c7a5" d="M0 0h1000v720H0z"/><path fill="url(#grid)" d="M0 0h1000v720H0z"/>
+  <path d="M750-20 720 100 740 190 690 270 700 355 590 445 540 550 410 660 420 740H1050V-20Z" fill="#73959a" stroke="#536f74" stroke-width="5"/>
+  <path d="M390-10c30 120 160 100 140 210S370 380 425 470s140 45 165-25M50 400c165-20 205 130 375 70" fill="none" stroke="#769a9e" stroke-width="19"/>
+  <path d="M390-10c30 120 160 100 140 210S370 380 425 470s140 45 165-25M50 400c165-20 205 130 375 70" fill="none" stroke="#afc5bf" stroke-width="3"/>
+  <path d="m70 60 200-10 100 115-90 125-210-10zm0 470 165-30 85 75-10 110H50Z" fill="url(#trees)" opacity=".75"/>
+  <g fill="#c2b38e" stroke="#746b57" stroke-width="3"><path d="m340 80 30-60 35 60m-40-15 25-42 25 42M130 360l40-65 45 65m-35-25 25-45 25 45M500 620l40-80 40 80"/></g>
+  <path d="m160 230 180 115 115 90 90 135" fill="none" stroke="#9c7954" stroke-width="3" stroke-dasharray="9 8"/>
+  <g fill="#5b5040" font-family="Georgia,serif" text-anchor="middle"><text x="400" y="80" font-size="29" letter-spacing="8">THE RIVERLANDS</text><text x="190" y="200" font-size="21">Elderwood</text><text x="355" y="329" font-size="21">Stoneford</text><text x="550" y="562" font-size="21">Tidewatch</text><text x="837" y="490" font-size="27" fill="#3e616b" transform="rotate(-18 837 490)">THE EASTERN SEA</text></g>
+  <g fill="#eadfc3" stroke="#655440" stroke-width="4"><circle cx="350" cy="347" r="8"/><circle cx="545" cy="581" r="8"/><circle cx="160" cy="230" r="8"/></g>
+  <path d="M25 25h950v670H25z" fill="none" stroke="#736c56" stroke-width="2"/>
+</svg>

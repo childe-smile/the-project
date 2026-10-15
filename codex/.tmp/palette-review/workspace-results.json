@@ -1,0 +1,80 @@
+[
+  {
+    "desktop": {
+      "columns": "368.328px 368.328px 368.344px",
+      "stats": [
+        "3 Properties",
+        "1 Mention on Wiki",
+        "3 Relations",
+        "1 Mention on Quill"
+      ],
+      "icon": {
+        "x": 277,
+        "y": 321.1949768066406,
+        "width": 88,
+        "height": 88,
+        "top": 321.1949768066406,
+        "right": 365,
+        "bottom": 409.1949768066406,
+        "left": 277
+      },
+      "description": {
+        "x": 375,
+        "y": 380.8824768066406,
+        "width": 240.328125,
+        "height": 31.875,
+        "top": 380.8824768066406,
+        "right": 615.328125,
+        "bottom": 412.7574768066406,
+        "left": 375
+      },
+      "fourStats": true,
+      "footerColumns": "165.156px 165.172px",
+      "descriptionBesideIcon": true,
+      "headDescription": true
+    }
+  },
+  {
+    "controls": "Type filters, search, empty results, all sort options, mouse and keyboard opening passed"
+  },
+  {
+    "mentions": {
+      "wiki": 2,
+      "quill": 3
+    }
+  },
+  {
+    "quillMentions": {
+      "before": "1",
+      "after": "3"
+    }
+  },
+  {
+    "atWidth": 900,
+    "columns": 2,
+    "mainWidth": 684,
+    "mainScroll": 684,
+    "overflow": false,
+    "iconWidth": 68
+  },
+  {
+    "atWidth": 390,
+    "columns": 1,
+    "mainWidth": 320,
+    "mainScroll": 320,
+    "overflow": false,
+    "iconWidth": 76
+  },
+  {
+    "atWidth": 320,
+    "columns": 1,
+    "mainWidth": 250,
+    "mainScroll": 250,
+    "overflow": false,
+    "iconWidth": 76
+  },
+  {
+    "emptyWorld": true,
+    "browserErrors": []
+  }
+]

@@ -1,0 +1,87 @@
+/* Dashboard composition follows the supplied wireframe and existing themes. */
+:root { --sidebar-width: 216px; }
+.topbar { gap: 14px; }
+.topbar .brand { min-width: 132px; }
+.topbar .search { flex: 1; max-width: 480px; }
+.sidebar-worlds { margin-top: 64px; padding: 0 8px 16px; }
+.sidebar-worlds h2 { margin-bottom: 10px; color: var(--paint-sky); font-size: 12px; font-weight: 600; letter-spacing: 0; }
+.sidebar-worlds-box { display: grid; gap: 7px; padding: 7px; border: 1px solid var(--line); border-radius: 8px; }
+.sidebar-worlds .world-list { display: grid; gap: 7px; max-height: 220px; overflow-y: auto; }
+:is(:root[data-theme], :root:not([data-theme])) .sidebar-worlds :is(.world-option, .world-create-button) {
+  width: 100%; min-height: 38px; padding: 9px 10px; border: 1px solid transparent;
+  border-radius: 5px; background: rgba(96, 137, 167, .10); color: var(--paint-sky);
+  text-align: left; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere;
+}
+:is(:root[data-theme], :root:not([data-theme])) .sidebar-worlds .world-option[aria-current="true"] {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paint-sky);
+  color: var(--ink);
+  border-color: var(--paint-sky);
+  font-weight: 700;
+  box-shadow: inset 3px 0 var(--gold-bright);
+}
+.sidebar-worlds .world-option::before { display: none; }
+:is(:root[data-theme], :root:not([data-theme])) .sidebar-worlds :is(.world-option:not([aria-current="true"]), .world-create-button):hover { background: rgba(100, 144, 176, .24); }
+.dashboard-content { max-width: 1280px; margin: 0 auto; padding: 40px clamp(24px, 4.5vw, 64px) 48px; }
+#view-world .world-hero {
+  min-height: 0; margin: 0; padding: 26px 30px; border: 1px solid var(--line);
+  border-radius: 10px; background: var(--surface); box-shadow: none;
+}
+#view-world .world-hero::before, #view-world .world-hero::after { display: none; }
+#view-world .world-hero-content { max-width: none; }
+#view-world .world-kicker { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 500; text-transform: none; letter-spacing: 0; }
+#view-world .world-title { color: var(--text); font-size: clamp(30px, 3.5vw, 42px); line-height: 1.2; font-weight: 600; letter-spacing: -.035em; }
+#view-world .world-description { max-width: 850px; margin: 14px 0 18px; color: var(--text-soft); font-size: 13px; line-height: 1.6; }
+#view-world .btn { min-height: 36px; padding: 9px 16px; border-radius: 5px; font-size: 12px; }
+#view-world .world-overview-grid { display: grid; grid-template-columns: minmax(0, .37fr) minmax(0, .63fr); gap: 14px; padding: 0; margin-top: 14px; }
+#view-world .world-overview-panel { padding: 18px 22px; border: 1px solid var(--line); border-radius: 8px; }
+#view-world .world-overview-panel h2 { margin: 0 0 18px; color: var(--text); font-size: 13px; font-weight: 500; letter-spacing: 0; }
+.world-summary-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: center; }
+.world-stats { display: grid; gap: 24px; margin: 0; font-size: 12px; }
+.world-stats > div { display: flex; gap: 5px; align-items: baseline; }
+.world-stats dt { order: 2; color: var(--text-soft); }
+.world-stats dd { margin: 0; font-weight: 600; color: var(--text); }
+.world-summary-actions { display: grid; gap: 24px; }
+#view-world .world-summary-actions .btn { padding: 9px 12px; font-size: 11px; }
+#view-world .world-overview-links { display: grid; gap: 14px; }
+#view-world .world-overview-link { min-height: 34px; padding: 9px 12px; border-radius: 5px; text-align: left; font-size: 12px; letter-spacing: 0; }
+:is(:root[data-theme], :root:not([data-theme])) #view-world .world-overview-link:hover { background: var(--surface-3); color: var(--text); border-color: var(--line-strong); }
+@media (max-width: 1100px) {
+  #view-world .world-overview-grid { grid-template-columns: minmax(0, .45fr) minmax(0, .55fr); }
+  #view-world .world-overview-panel { padding: 18px; }
+  .world-summary-body { gap: 12px; }
+}
+@media (max-width: 860px) {
+  :root { --sidebar-width: 70px; }
+  .sidebar-worlds { padding: 0; margin-top: 24px; }
+  .sidebar-worlds h2 { font-size: 10px; text-align: center; }
+  .sidebar-worlds-box { padding: 3px; gap: 4px; }
+  :is(:root[data-theme], :root:not([data-theme])) .sidebar-worlds .world-option { font-size: 9px; padding: 7px 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  :is(:root[data-theme], :root:not([data-theme])) .sidebar-worlds .world-create-button { font-size: 9px; padding: 7px 3px; }
+  .topbar .brand { min-width: 38px; }
+  #view-world .world-overview-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  :root { --topbar-height: 108px; }
+  .topbar {
+    display: grid;
+    grid-template-columns: 36px 38px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .topbar .brand { min-width: 0; }
+  .topbar .search { grid-column: 1 / -1; grid-row: 2; width: 100%; max-width: none; min-width: 0; }
+  .topbar .topbar-right { gap: 8px; }
+  .topbar .theme-toggle { min-width: 36px; width: 36px; padding: 0; }
+  .topbar .theme-toggle-label { display: none; }
+  .topbar .btn-gold { padding: 8px 10px; white-space: nowrap; }
+  .topbar .topbar-right { grid-column: 3 / -1; justify-self: end; }
+  .dashboard-content { padding: 20px 16px 32px; }
+  #view-world .world-hero { padding: 24px 20px; }
+  #view-world .world-title { font-size: 30px; }
+  .world-summary-body { grid-template-columns: 1fr; gap: 20px; }
+  .world-stats { gap: 14px; }
+  .world-summary-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+}

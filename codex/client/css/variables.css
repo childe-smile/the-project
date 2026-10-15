@@ -1,0 +1,80 @@
+/* ============================================================
+   VARIABLES — Medieval & Minimalist Modern Aesthetic
+   ============================================================ */
+:root {
+  /* ----- Slate & Obsidian Stone Foundations ----- */
+  --bg: #101318;
+  --bg-radial: radial-gradient(circle at 50% 0%, rgba(207, 171, 93, 0.08) 0%, rgba(16, 19, 24, 0) 70%);
+  --surface: #161a22;
+  --surface-2: #1e242f;
+  --surface-3: #27303e;
+  --surface-overlay: rgba(22, 26, 34, 0.88);
+  --surface-parchment: #eae3d3;
+
+  /* ----- Gilded Borders & Hairline Filigree ----- */
+  --line: rgba(207, 171, 93, 0.2);
+  --line-soft: rgba(207, 171, 93, 0.1);
+  --line-strong: rgba(207, 171, 93, 0.45);
+
+  /* ----- Text & Typography Tone ----- */
+  --text: #f5f3ec;
+  --text-soft: #d5cec2;
+  --muted: #9e978a;
+  --muted-2: #6e675b;
+
+  /* ----- Burnished Gold & Metals ----- */
+  --gold: #cfab5d;
+  --gold-bright: #f5d78e;
+  --gold-dim: #8f7238;
+  --gold-glow: rgba(207, 171, 93, 0.24);
+  --gold-gradient: linear-gradient(135deg, #dfbc6d 0%, #ba9143 50%, #d8b464 100%);
+  --gold-gradient-hover: linear-gradient(135deg, #ebd088 0%, #cfaa56 50%, #e9c97a 100%);
+
+  /* ----- Medieval Illuminated Jewel Accents ----- */
+  --verdigris: #4ea699;
+  --verdigris-glow: rgba(78, 166, 153, 0.25);
+  --crimson: #c8524b;
+  --crimson-glow: rgba(200, 82, 75, 0.25);
+  --arcane: #9380e6;
+  --arcane-glow: rgba(147, 128, 230, 0.25);
+  --sage: #78ab6a;
+  --amber: #d88942;
+  --blue: #4982a8;
+  --blue-bright: #68a4cc;
+  --teal: #4ea699;
+  --rose: #c8524b;
+  --danger: #d4594f;
+  --success: #4ea699;
+
+  /* ----- Parchment & Manuscript Elements ----- */
+  --parchment: #f0e9dc;
+  --parchment-soft: #ded5c2;
+  --parchment-border: #c4b89f;
+  --ink: #1b1c20;
+  --ink-soft: #3a3b42;
+
+  /* ----- Typography Stacks ----- */
+  --font-display: "Cinzel", "Fraunces", Georgia, serif;
+  --font-serif: "Cinzel", "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "IBM Plex Sans", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+
+  /* ----- Spacing & Geometry ----- */
+  --sidebar-width: 256px;
+  --topbar-height: 70px;
+  --radius: 8px;
+  --radius-medium: 12px;
+  --radius-large: 18px;
+  --radius-full: 9999px;
+
+  /* ----- Shadows & Luminance ----- */
+  --shadow-small: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-large: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 1px 1px rgba(207, 171, 93, 0.18);
+  --shadow-glow: 0 0 24px rgba(207, 171, 93, 0.22);
+  --vvd-glow: rgba(207, 171, 93, 0.22);
+
+  /* ----- Micro-interaction Timings ----- */
+  --transition-fast: 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-normal: 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
